@@ -33,7 +33,7 @@ lazy val a = project
   .in(file("modules/b"))
   .settings(moduleSettings)
   .settings(
-    name := "cache4s",
+    name := "module-b",
     libraryDependencies ++= Dependencies.moduleDep,
     Test / parallelExecution := false,
     run / fork               := true,
@@ -44,7 +44,7 @@ lazy val b = project
   .in(file("modules/a"))
   .settings(moduleSettings)
   .settings(
-    name := "core-resource",
+    name := "module-a",
     libraryDependencies ++= Dependencies.moduleDep,
     Test / parallelExecution := false,
     run / fork               := true,
